@@ -1,0 +1,464 @@
+ .main, .welcome, .boost{
+    max-width: 1440px;
+    margin:auto;
+    padding: 5px;
+}
+.preloader  {text-align: center;}
+//  section welcome ================================
+.welcome {
+    display:flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    align-items: center;
+    padding-left: 165px;
+    overflow-x:hidden;
+
+    h1 {
+        font-size: 80px;
+        line-height: 90px;
+        letter-spacing: -2px;
+        color: hsl(255, 11%, 22%);
+    }
+   p {
+       color:hsl(0, 0%, 75%);
+       font-size: 22px;
+       word-spacing: 2px;
+       line-height: 35px;
+       margin-bottom: 40px;
+       padding-right:50px;
+   }
+   a {
+       display: inline-block;
+       text-decoration: none;
+       width: 200px;
+       background-color: hsl(180, 66%, 49%);
+       text-align: center;
+       color: white;
+       padding: 13px;
+       border-radius: 50px;
+       font-weight: bold;
+        font-size: 19px;
+        word-spacing: 5px;
+   }
+   img {
+     margin-right: -130px;
+   }
+
+}
+
+@media screen and (max-width: 750px) {
+    .welcome {
+        margin-top: 50px;
+        img {
+           width: 495px !important;
+           margin-left: 175px !important;
+           margin-right:0 !important ;
+        }
+
+        h1 {
+            font-size: 45px;
+            line-height: 45px;
+            letter-spacing: -3px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            word-spacing: 2px;
+            line-height: 30px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .welcome {
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-left: 5px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .welcome {
+        img {
+            width: 550px;
+        }
+    }
+}
+
+
+
+//  section main ================================
+.main {
+     
+     background-color: #f0f1f6;
+     margin-top: 150px;
+     .output {
+         max-width: 1110px;
+         margin: auto;
+         min-height: 60px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background-color: white;
+         margin-top: 10px;
+         margin-bottom: 10px;
+         padding: 10px;
+         border-radius: 5px;
+         .hr-separator {
+             display: none;
+         }
+         .result-shirt {
+             color: hsl(0, 0%, 75%);
+         }
+         button {
+             margin-left: 20px;
+             width: 90px;
+             height: 35px;
+             border: none;
+             background-color: hsl(180, 66%, 49%);
+             border-radius: 5px;
+             color: white;
+             cursor: pointer;
+             font-size: 15px;
+             font-weight: bold;
+             outline:none;
+             transition: all, 0.5s;
+        }
+     }
+
+     .input-wrapper {
+         height: 170px;
+         max-width: 1110px;
+         background-image: url(/projects/shorterlinks/assets/images/bg-shorten-desktop.svg);
+         background-color: #4B3F6B;
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         border-radius: 10px;
+         margin: auto;
+         margin-top: -90px;
+         position: relative;
+
+         .filter {
+            position: absolute;
+            top:0;
+            left:0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(71, 64, 115, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            form {
+                text-align: center;
+                display: flex;
+
+                input{
+                    display: inline-block;
+                }
+                .input-text {
+                     width: 770px;
+                     height: 65px;
+                     border-radius: 10px;
+                     outline: none;
+                     border: 2px solid red;
+                     margin-right: 25px;
+                     padding: 5px 10px 5px 20px;
+                     font-size: 25px;
+                     color: hsl(180, 66%, 49%);
+                     }
+                    .input-submit {
+                    height: 65px;
+                    width: 190px;
+                    border-radius: 10px;
+                    font-weight: bold;
+                    font-size: 22px;
+                    color: #ffffff;
+                    background-color: #2acfcf;
+                    outline:none;
+                    border:none;
+                    cursor: pointer;
+                    
+                 }
+                 .message {
+                     color:red;
+                     font-style: italic;
+                     text-align: left;
+                 }
+
+            }
+            
+            
+        }
+        
+     }
+
+
+     .statistics {
+        margin-top: 115px;
+        &-header {
+            text-align: center;
+            font-size: 40px;
+            letter-spacing: -1px;
+            color:  hsl(257, 27%, 26%);
+        }
+
+        &-title {
+            text-align: center;
+            padding: 0px 450px 0px 450px;
+            margin-top: 15px;
+            color: #9b9ba3
+        }
+
+
+     }
+
+     .cards-wrapper {
+        margin-top: 100px;
+        margin-bottom: 120px;
+        display: flex;
+        justify-content: center;
+        height: 350px;
+        
+        .card {
+            background-color: white;
+            max-width: 350px;
+            padding: 33px;
+            border-radius: 5px;
+
+           .icon-wrapper {
+               background-color: hsl(260, 8%, 14%);
+               width: 90px;
+               height: 90px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               border-radius: 50px;
+               margin-top: -75px;
+           }
+
+           h3 {
+               margin-top: 30px;
+               margin-bottom: 15px;
+               color: hsl(260, 8%, 14%);
+           }
+           p {
+               font-size: 15px;
+               line-height: 27px;
+               color: hsl(0, 0%, 75%);
+               
+           }
+
+        }
+
+        .separator {
+            width: 30px;
+            height: 10px;
+            background-color: #26d2d2;
+            margin-bottom: 35px;
+        }
+
+        .card-top {
+            align-self: flex-start;
+        }
+
+        .card-center {
+            align-self: center;
+        }
+
+        .card-bottom {
+            align-self: flex-end;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 1100px) {  
+  .main {  
+      padding-right: 25px; 
+      padding-left: 25px; 
+    .input-wrapper {
+        background-image: url(/projects/shorterlinks/assets/images/bg-shorten-mobile.svg);
+        .filter {
+           form {
+               flex-direction: column; 
+               justify-content: center; 
+               align-items: center; 
+               margin: 0 ; 
+                .input-field-wrapper { 
+                    width:300px; 
+                } 
+               input{
+                   display: inline-block;
+               }
+               .input-text {
+                    width: 300px; 
+                    height: 50px;
+                    font-size: 18px;
+                    }
+                   .input-submit {
+                   height: 50px ; 
+                   width: 300px;
+                   margin-top: 5px; 
+                }
+           }
+           
+           
+       }
+       
+    }
+
+    .output {
+        max-width: 850px;
+        
+        min-height: 70px; 
+        flex-direction: column; 
+        align-items: flex-start; 
+        margin-top: 20px !important;
+        margin-bottom: 20px;
+        .hr-separator { 
+            display: block;
+            width: 100%;
+            border: none;
+            height: 1px;
+            background-color: lightgray;
+        }
+        .result-shirt {
+            color: hsl(0, 0%, 75%);
+            width: 100%; 
+            display: inline-block;
+        }
+        button {
+            
+            width: 100%; 
+            margin: 0; 
+            height: 40px; 
+       }
+    }
+
+    .statistics {
+        margin-top: 80px; 
+        &-header {
+        font-size: 30px !important; 
+        }
+
+        &-title {
+            padding: 0px 5px 0px 5px;
+            margin-top: 15px;
+        }
+    }
+
+     .cards-wrapper {
+        margin-top: 100px;
+        margin-bottom: 60px; 
+        flex-direction: column; 
+        justify-content: center;
+        height: 100%; 
+        
+        .card {
+           
+           .icon-wrapper {
+               margin: auto; 
+               margin-top: -75px;
+           }
+
+           h3 {
+               text-align: center; 
+           }
+           p {
+                text-align: center; 
+             }
+
+        }
+
+        .separator {
+            width: 10px; 
+            height: 50px;
+        }
+
+        .card-top {
+            align-self: center;
+        }
+
+        .card-bottom {
+            align-self: center;
+        }
+
+    }
+
+ }
+}
+
+
+// section boost
+ .boost{
+    height:255px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url(/projects/shorterlinks/assets/images/bg-boost-desktop.svg);
+    background-color: #4B3F6B;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+    .filter {
+        position: absolute;
+            top:0;
+            left:0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(75, 64, 107, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+           
+    }
+
+    h2 {
+        color:white;
+        font-size: 38px;
+        margin-bottom: 25px;
+    }
+    a {
+        text-decoration: none;
+        display: block;
+        color: white;
+        width: 200px;
+        background-color: #2acfcf;
+        text-align: center;
+        padding: 13px ;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 19px;
+        word-spacing: 5px;
+    }
+ }
+
+ @media screen and (max-width: 1000px) { 
+
+    .boost{
+        background-image: url(/projects/shorterlinks/assets/images/bg-boost-mobile.svg);
+        h2 {
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+        a {    
+            width: 180px;
+            padding: 15px;
+        }
+     }
+ }
+

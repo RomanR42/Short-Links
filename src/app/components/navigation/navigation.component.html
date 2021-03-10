@@ -1,0 +1,42 @@
+<nav>
+    <div class="left-side">
+        <img src="assets/images/logo.svg " alt="logo">
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Resources</a>
+    </div>
+    <div class="right-side">
+        <a href="#">Login</a>
+        <a href="#">Sign Up</a>
+    </div>
+  
+    <img src="assets/images/logo.svg " alt="logo" class="mobile-image">
+    <div class="mobile-menu-wrapper">
+        <button mat-icon-button [matMenuTriggerFor]="menu" class="btn-menu-mobile">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item class="menu-mobile">
+                <span>Features</span>
+            </button>
+            <button mat-menu-item class="menu-mobile">
+                <span>Pricing</span>
+            </button>
+            <button mat-menu-item class="menu-mobile">
+                <span>Resources</span>
+            </button>
+            <button mat-menu-item class="menu-mobile" disabled>
+                <hr>
+            </button>
+            <button mat-menu-item class="menu-mobile">
+                <span>Login</span>
+            </button>
+             <button mat-menu-item class="menu-mobile">
+                <span>Sign Up</span>
+            </button>
+        </mat-menu>
+    </div>
+</nav>
+
+
+   

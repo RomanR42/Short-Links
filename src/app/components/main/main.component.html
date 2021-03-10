@@ -1,0 +1,103 @@
+<section class="welcome">
+    <div>
+        <h1>
+            More than just shorter links
+        </h1>
+        <p>
+            Build your brand's recognition and get detailed 
+            insights on how your links are performing.
+        </p>
+        <a href="#">Get Started</a>
+    </div>
+    <img src="assets/images/illustration-working.svg" alt="working">
+</section>
+<div class="preloader" *ngIf="isDataReady"><img src="assets/loading.gif" alt="preloader"></div>
+<section class="main">
+    
+    <div class="input-wrapper">
+        <div class="filter">
+            <form [formGroup]="sendForm" (ngSubmit)="sendRequest()">
+                <div class="input-field-wrapper">
+                  <input type="text" placeholder="Shorten a link here ..." 
+                  class="input-text" formControlName="send" (input)="onInput()">
+                    <div class="message" *ngIf="(sendForm.get('send').hasError('required') && 
+                            sendForm.get('send').touched)|| sbmControlValid">
+                            Please add a link
+                    </div>
+                    <div class="message" *ngIf="(sendForm.get('send').hasError('pattern') && 
+                            sendForm.get('send').touched)">
+                            Please, enter a correct link
+                    </div>
+                </div>
+                <input type="submit" value="Shorten It" class="input-submit">
+            </form>
+        </div>
+    </div>
+    <div class="output" *ngFor ="let result of resultArray">
+        <span> {{result.original}}</span> 
+        <hr class="hr-separator">
+        <span class="result-shirt">
+            <span>{{result.short}}</span>
+             <button (click)="copy(result.short, btn)" #btn class="copyBtn">Copy</button>
+        </span>
+    </div>
+
+    <div class="statistics">
+        <h2 class="statistics-header">
+            Advanced Statistics
+        </h2>
+        <p class="statistics-title">
+            Track how your links are performing across the web with
+            our advanced statistics dashboard
+        </p>
+
+        <div class="cards-wrapper">
+            <div class="card card-top">
+                <div class="icon-wrapper">
+                    <img src="assets/images/icon-brand-recognition.svg" alt="icon">
+                </div>
+                <h3>Brand Recognition</h3>
+                <p>
+                    Boost your brand recognition with each click. Generic links don't
+                    mean a thing. Branded links help instill confidence in your content.
+                 </p>
+            </div>
+            <div class="separator card-center"></div>
+            <div class="card card-center">
+                <div class="icon-wrapper">
+                    <img src="assets/images/icon-detailed-records.svg" alt="icon">
+                </div>
+                <h3>Detailed Records</h3>
+                <p>
+                    Gain insights into who is clicking your links. Knowing when and where
+                    people engage with your content helps inform better decisions.
+                </p>
+            </div>
+            <div class="separator card-center"></div>
+            <div class="card card-bottom">
+                <div class="icon-wrapper">
+                    <img src="assets/images/icon-fully-customizable.svg" alt="icon">
+                </div>
+                <h3>Fully Customizable</h3>
+                <p>
+                    Improve brand awareness and content discoverability through
+                    customizable links, supercharging audience engagement.
+                 </p>
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+   
+</section>
+
+<section class="boost">
+    <div class="filter">
+        <h2>Boost your links today</h2>
+        <a href="#">Get Started</a>
+    </div>
+</section>
